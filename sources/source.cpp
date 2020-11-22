@@ -123,8 +123,7 @@ the_lists_of_brokers_accounts(const filesys::path& new_path) {
         filesys::path the_entry_to_the_path;
         if (filesys::is_regular_file(the_entry_of_the_file)) {
             the_entry_to_the_path = the_entry_of_the_file.path();
-        }
-        else if (filesys::is_symlink(the_entry_of_the_file)){
+        } else if (filesys::is_symlink(the_entry_of_the_file)){
             the_entry_to_the_path =
                     filesys::read_symlink(
                             the_entry_of_the_file.path());
@@ -149,8 +148,7 @@ the_lists_of_brokers_accounts(const filesys::path& new_path) {
         if (the_accounts_iter ==
         the_set_of_the_accounts.end()) {
             the_set_of_the_accounts.insert(an_account);
-        }
-        else {
+        } else {
             auto& one_element = *the_accounts_iter;
             an_account.update_the_information_of_the_account(
                     one_element.get_the_latest_date(),
